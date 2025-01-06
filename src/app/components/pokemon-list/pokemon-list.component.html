@@ -1,0 +1,34 @@
+<mat-toolbar [style.background-color]="'#DC143C'" color="primary">
+  <span style="font-weight: bold; font-size: 1.5rem;">Pokedex</span>
+  <span class="spacer"></span>
+  <button mat-button (click)="toggleViewMode('cards')" [disabled]="viewMode === 'cards'">
+    Cards View
+  </button>
+  <button mat-button (click)="toggleViewMode('table')" [disabled]="viewMode === 'table'">
+    Table View
+  </button>
+</mat-toolbar>
+
+<div *ngIf="isLoading" class="spinner-container">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading" @listAnimation>
+  <!-- Vista de Cards -->
+  <div *ngIf="viewMode === 'cards'" class="cards-container">
+    <app-card
+      *ngFor="let pokemon of pokemons"
+      [name]="pokemon.name"
+      [imageUrl]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + (pokemon.url.split('/')[6]) + '.png'"
+      [link]="'/pokemon/' + pokemon.name"
+    ></app-card>
+  </div>
+
+  <!-- Vista de Tabla -->
+  <app-grid
+    *ngIf="viewMode === 'table'"
+    [data]="pokemons"
+    [displayedColumns]="['name']"
+  ></app-grid>
+
+</div>

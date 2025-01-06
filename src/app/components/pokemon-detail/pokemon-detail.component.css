@@ -1,0 +1,22 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.pokemon-image {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+
+.details-panel {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 1rem;
+}

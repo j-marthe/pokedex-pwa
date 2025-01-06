@@ -1,0 +1,8 @@
+<mat-card class="card">
+    <img mat-card-image [src]="imageUrl" [alt]="name" />
+    <mat-card-title>{{ name | titlecase }}</mat-card-title>
+    <mat-card-actions>
+      <a mat-button color="accent" [routerLink]="link">Details</a>
+    </mat-card-actions>
+</mat-card>
+  
