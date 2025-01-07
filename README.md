@@ -80,4 +80,4 @@ ng build --prod
 Los archivos generados en la carpeta `dist/` son los que deben ser desplegados en un servidor.
 
 ## **Despliegue en Netlify**
-La aplicación está desplegada y disponible en **Netlify**, visitala en:
+La aplicación está desplegada y disponible en **Netlify**, visitala en: `https://pokedex-pwa-angular.netlify.app/`.
